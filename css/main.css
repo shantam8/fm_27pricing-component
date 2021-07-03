@@ -27,6 +27,7 @@ header .flexWrapper p {
 }
 
 header .flexWrapper label .outerBtn {
+  display: inline-block;
   padding: 3px;
   height: 40px;
   width: 80px;
@@ -36,10 +37,11 @@ header .flexWrapper label .outerBtn {
 }
 
 header .flexWrapper label .outerBtn .switch {
+  display: inline-block;
   position: relative;
   height: 100%;
   width: 50%;
-  left: 0;
+  left: 18px;
   background-color: white;
   border-radius: 50%;
   -webkit-transition: left 0.3s linear;
@@ -103,11 +105,11 @@ main .card h2 {
 }
 
 main .card h2:last-of-type {
-  display: block;
+  display: none;
 }
 
 main .card h2:first-of-type {
-  display: none;
+  display: block;
 }
 
 main .card p {
@@ -189,19 +191,45 @@ body {
   background-color: #f6f6fe;
 }
 
+body::before {
+  position: absolute;
+  content: "";
+  background-image: url("../images/bg-top.svg");
+  background-position: top right;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+body::after {
+  position: absolute;
+  content: "";
+  background-image: url("../images/bg-bottom.svg");
+  background-position: bottom left;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
 body #checkboxSwitch {
   display: none;
 }
 
 body #checkboxSwitch:checked ~ header .flexWrapper label .outerBtn .switch {
-  left: 35px;
+  left: -18px;
 }
 
 body #checkboxSwitch:checked ~ main .card h2:first-of-type {
-  display: block;
+  display: none;
 }
 
 body #checkboxSwitch:checked ~ main .card h2:last-of-type {
-  display: none;
+  display: block;
 }
 /*# sourceMappingURL=main.css.map */

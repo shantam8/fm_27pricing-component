@@ -18,6 +18,7 @@ header {
 
     label {
       .outerBtn {
+        display: inline-block;
         padding: 3px;
         height: 40px;
         width: 80px;
@@ -25,10 +26,12 @@ header {
         background-image: linear-gradient(to Right, $gradientFrom, $gradientTo);
 
         .switch {
+          display: inline-block;
+
           position: relative;
           height: 100%;
           width: 50%;
-          left: 0;
+          left: 18px;
           background-color: white;
           border-radius: 50%;
           transition: left 0.3s linear;

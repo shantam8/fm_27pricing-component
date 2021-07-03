@@ -20,6 +20,32 @@ button {
 
 body {
   background-color: $veryLightGrayishBlue;
+  
+  &::before{
+    position: absolute;
+    content: "";
+    background-image: url("../images/bg-top.svg");
+    background-position: top right;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  &::after{
+    position: absolute;
+    content: "";
+    background-image: url("../images/bg-bottom.svg");
+    background-position: bottom left;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
 
   #checkboxSwitch {
     display: none;
@@ -27,16 +53,16 @@ body {
 
   #checkboxSwitch:checked ~ header .flexWrapper {
     label .outerBtn .switch {
-      left: 35px;
+      left: -18px;
     }
   }
 
   #checkboxSwitch:checked ~ main .card {
     h2:first-of-type {
-      display: block;
+      display: none;
     }
     h2:last-of-type {
-      display: none;
+      display: block;
     }
   }
 }
