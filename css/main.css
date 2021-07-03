@@ -1,8 +1,207 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+header {
+  text-align: center;
+}
+
+header h1 {
+  margin-top: 3rem;
+  color: #6d708d;
+}
+
+header .flexWrapper {
+  margin: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .flexWrapper p {
+  margin: 0 2rem;
+  color: #b3b5c6;
+}
+
+header .flexWrapper label .outerBtn {
+  padding: 3px;
+  height: 40px;
+  width: 80px;
+  border-radius: 20px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background-image: linear-gradient(to Right, #a3a8f0, #696fdd);
+}
+
+header .flexWrapper label .outerBtn .switch {
+  position: relative;
+  height: 100%;
+  width: 50%;
+  left: 0;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-transition: left 0.3s linear;
+  transition: left 0.3s linear;
+}
+
+header .flexWrapper label .outerBtn:hover, header .flexWrapper label .outerBtn:focus {
+  cursor: pointer;
+  outline: 2px solid green;
+}
+
+main .card {
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  width: 19.5rem;
+  max-width: 28rem;
+  background-color: white;
+  border-radius: 8px;
+  text-align: center;
+  color: #6d708d;
+}
+
+main .card.card:nth-child(2) {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#a3a8f0), to(#696fdd));
+  background-image: linear-gradient(to Bottom Right, #a3a8f0, #696fdd);
+  color: white;
+}
+
+main .card.card:nth-child(2) h2 {
+  color: white;
+}
+
+main .card.card:nth-child(2) button {
+  background-color: white;
+  background-clip: content-box;
+  background-image: none;
+  color: #7579d2;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+main .card.card:nth-child(2) button:hover, main .card.card:nth-child(2) button:focus {
+  cursor: pointer;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+}
+
+main .card.card:nth-child(2) button:active {
+  -webkit-transition: all 0s ease-in-out;
+  transition: all 0s ease-in-out;
+  color: red;
+}
+
+main .card h2 {
+  margin: 1rem 0;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  color: #494c5f;
+}
+
+main .card h2:last-of-type {
+  display: block;
+}
+
+main .card h2:first-of-type {
+  display: none;
+}
+
+main .card p {
+  padding: 1rem;
+}
+
+main .card p:not(:first-child) {
+  border-top: 1px solid #b3b5c6;
+}
+
+main .card p:last-of-type {
+  border-bottom: 1px solid #b3b5c6;
+}
+
+main .card button {
+  margin-top: 2rem;
+  height: 50px;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#a3a8f0), to(#696fdd));
+  background-image: linear-gradient(to Right, #a3a8f0, #696fdd);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+main .card button:hover, main .card button:focus {
+  cursor: pointer;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid #6d708d;
+  color: #7579d2;
+}
+
+main .card button:active {
+  -webkit-transition: all 0s ease-in-out;
+  transition: all 0s ease-in-out;
+  color: red;
+}
+
+@media screen and (min-width: 50rem) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .card {
+    margin: 0;
+  }
+  main .card:nth-child(2) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+h1,
+h2,
+p,
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+body {
+  background-color: #f6f6fe;
+}
+
+body #checkboxSwitch {
+  display: none;
+}
+
+body #checkboxSwitch:checked ~ header .flexWrapper label .outerBtn .switch {
+  left: 35px;
+}
+
+body #checkboxSwitch:checked ~ main .card h2:first-of-type {
+  display: block;
+}
+
+body #checkboxSwitch:checked ~ main .card h2:last-of-type {
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */

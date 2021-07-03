@@ -1,12 +1,42 @@
 @import "colors";
 @import "fonts";
 
+@import "1header";
+@import "2mainSection";
 
-//     font-family: 'Montserrat', sans-serif; 7
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+h1,
+h2,
+p,
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+  background-color: $veryLightGrayishBlue;
+
+  #checkboxSwitch {
+    display: none;
+  }
+
+  #checkboxSwitch:checked ~ header .flexWrapper {
+    label .outerBtn .switch {
+      left: 35px;
+    }
+  }
+
+  #checkboxSwitch:checked ~ main .card {
+    h2:first-of-type {
+      display: block;
+    }
+    h2:last-of-type {
+      display: none;
+    }
+  }
 }

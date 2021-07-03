@@ -1,0 +1,114 @@
+main {
+  .card {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    width: 19.5rem;
+    max-width: 28rem;
+    background-color: white;
+    border-radius: 8px;
+    text-align: center;
+    color: $grayishBlue;
+
+    &.card:nth-child(2) {
+      background-image: linear-gradient(
+        to Bottom Right,
+        $gradientFrom,
+        $gradientTo
+      );
+      color: white;
+
+      h2 {
+        color: white;
+      }
+
+      button {
+        background-color: white;
+        background-clip: content-box;
+        background-image: none;
+        color: #7579d2;
+        transition: all 0.3s ease-in-out;
+
+        &:hover,
+        &:focus {
+          cursor: pointer;
+          border: 1px solid white;
+          background-color: transparent;
+          color: white;
+        }
+
+        &:active {
+          transition: all 0s ease-in-out;
+          color: red;
+        }
+      }
+    }
+
+    h2 {
+      margin: 1rem 0;
+      margin-bottom: 2rem;
+      font-size: 3rem;
+      color: $darkGrayishBlue;
+    }
+
+    h2:last-of-type {
+      display: block;
+    }
+
+    h2:first-of-type {
+      display: none;
+    }
+
+    p {
+      padding: 1rem;
+    }
+
+    p:not(:first-child) {
+      border-top: 1px solid $lightGrayishBlue;
+    }
+
+    p:last-of-type {
+      border-bottom: 1px solid $lightGrayishBlue;
+    }
+
+    button {
+      margin-top: 2rem;
+      height: 50px;
+      width: 100%;
+      background-image: linear-gradient(to Right, $gradientFrom, $gradientTo);
+      border: none;
+      border-radius: 8px;
+      color: white;
+      transition: all 0.3s ease-in-out;
+
+      &:hover,
+      &:focus {
+        cursor: pointer;
+        background-color: transparent;
+        background-image: none;
+        border: 1px solid $grayishBlue;
+        color: #7579d2;
+      }
+
+      &:active {
+        transition: all 0s ease-in-out;
+        color: red;
+      }
+    }
+  }
+
+  @media screen and (min-width: 50rem) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .card {
+      margin: 0;
+    }
+
+    .card:nth-child(2) {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+  }
+}

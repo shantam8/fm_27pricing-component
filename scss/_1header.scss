@@ -1,0 +1,45 @@
+header {
+  text-align: center;
+
+  h1 {
+    margin-top: 3rem;
+    color: $grayishBlue;
+  }
+  .flexWrapper {
+    margin: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      margin: 0 2rem;
+      color: $lightGrayishBlue;
+    }
+
+    label {
+      .outerBtn {
+        padding: 3px;
+        height: 40px;
+        width: 80px;
+        border-radius: 20px;
+        background-image: linear-gradient(to Right, $gradientFrom, $gradientTo);
+
+        .switch {
+          position: relative;
+          height: 100%;
+          width: 50%;
+          left: 0;
+          background-color: white;
+          border-radius: 50%;
+          transition: left 0.3s linear;
+        }
+
+        &:hover,
+        &:focus {
+          cursor: pointer;
+          outline: 2px solid green;
+        }
+      }
+    }
+  }
+}
